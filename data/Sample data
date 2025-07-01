@@ -1,0 +1,18 @@
+### 📊 Dataset Source and Sampling
+
+The original dataset is a large e-commerce clickstream dataset from [Kaggle](https://www.kaggle.com/datasets/mkechinov/ecommerce-behavior-data-from-multi-category-store) (~5.5 GB total across multiple months). Due to Databricks Community Edition limitations, I only used a smaller chunk for this project.
+
+**Sample Used:** `2019-Nov.csv`
+
+**File Location in Unity Catalog Volume:**
+
+To reduce the size for initial testing and development, I extracted a smaller sample using the following code:
+
+```python
+import pandas as pd
+
+# Load the full CSV (locally before uploading to Databricks)
+df = pd.read_csv("2019-Nov.csv", nrows=10_000)  # First 10k rows
+
+# Save to a new sample file
+df.to_csv("2019-Nov-sample.csv", index=False)
