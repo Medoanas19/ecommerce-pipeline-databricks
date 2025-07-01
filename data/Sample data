@@ -5,6 +5,8 @@ The original dataset is a large e-commerce clickstream dataset from [Kaggle](htt
 **Sample Used:** `2019-Nov.csv`
 
 **File Location in Unity Catalog Volume:**
+File Location >> /Volumes/workspace/default/ecomm_project/2019-Nov-sample.csv
+
 
 To reduce the size for initial testing and development, I extracted a smaller sample using the following code:
 
